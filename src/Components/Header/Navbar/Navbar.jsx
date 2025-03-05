@@ -8,6 +8,8 @@ import {
     IconButton,
     Typography,
     Box,
+    Button,
+    TextField
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -50,9 +52,20 @@ const Header = ({ handleDrawer, open }) => {
                     }
                     <Heading>{pathName || 'Keep'}</Heading>
                 </Box>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexGrow: 1 }}>
+                    <TextField
+                        label="Search"
+                        variant="outlined"
+                        size="small"
+                        sx={{ width: 700 }}
+                    />
+                </Box>
+                <Box sx={{ display: "flex", justifyContent: "flex-end", flexGrow: 1 }}>
+                    <Button variant="outlined" sx={{ marginRight: 2 }}>Login</Button>
+                    <Button variant="contained">Signup</Button>
+                </Box>
             </Toolbar>
         </Navbar>
     )
 }
-
 export default Header;
